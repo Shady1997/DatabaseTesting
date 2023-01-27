@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Database Testing Framework">
+    <test verbose="1" preserve-order="true" name="Test CRUD Operations on MySQL Database">
+        <classes>
+            <class name="testcases.TC01_CRUDTest">
+                <methods>
+                    <include name="testInsert"/>
+                    <include name="testSelect"/>
+                    <include name="testUpdate"/>
+                    <include name="testDelete"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="1" preserve-order="true" name="Test Constraints on MySQL Database">
+        <classes>
+            <class name="testcases.TC02_ConstraintsTest">
+                <methods>
+                    <include name="testUniqueConstraint"/>
+                    <include name="testNotNullConstraint"/>
+                    <include name="testPrimaryKeyConstraint"/>
+                    <include name="testForeignKeyConstraint"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
